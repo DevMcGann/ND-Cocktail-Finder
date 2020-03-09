@@ -56,7 +56,7 @@ const SearchScreen = ({navigation}) => {
       <Header navigation={navigation} callback={callback_data_from_Header} cancel={cancel_from_Header}/>
       <View  style={styles.content}>
          {(() => {
-            if (!search && !fetching  &&!fetched_Drinks.drinks){
+            if (!search && !fetching  && !fetched_Drinks.drinks){
               return <Text style={styles.defaultText}>Type at least 3 Characters to search your favorite Cocktail</Text>;
             }
             if (!fetching && !fetched_Drinks.drinks && search) {
