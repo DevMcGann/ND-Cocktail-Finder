@@ -7,7 +7,7 @@
 
 
 import React,{useState, useEffect} from 'react';
-import {View, ActivityIndicator,StyleSheet,Text} from 'react-native';
+import {View, ActivityIndicator,Text} from 'react-native';
 //componentes
 import Header from '../../components/Header/index.js';
 import Lista from '../../components/Flatlist/index.js';
@@ -54,10 +54,13 @@ const SearchScreen = ({navigation}) => {
   return (
     <View style={styles.mainContainer}>
       <Header navigation={navigation} callback={callback_data_from_Header} cancel={cancel_from_Header}/>
-      <View  style={styles.gradient}>
+      <View  style={styles.content}>
          {(() => {
-            if (!fetching && !fetched_Drinks.drinks) {
-              return null;
+            if (!search && !fetching  &&!fetched_Drinks.drinks){
+              return <Text style={styles.defaultText}>Type at least 3 Characters to search your favorite Cocktail</Text>;
+            }
+            if (!fetching && !fetched_Drinks.drinks && search) {
+              return <Text style={styles.noResults}>Oops! There is no Cocktail with that name!</Text>;
             }
             if (error) {
               return <Text>Error!</Text>;
@@ -65,6 +68,7 @@ const SearchScreen = ({navigation}) => {
             if (fetching){
               return <ActivityIndicator size="large" color="#0000ff" />;
             }
+            
             if (fetched_Drinks.drinks){
               return <Lista style={styles.lista}
                 drinks={fetched_Drinks.drinks}
