@@ -3,7 +3,7 @@ import {TouchableOpacity, Text} from 'react-native';
 import styles from './styles.js';
 import PropTypes from 'prop-types';
 
-const Cancel_Button = props => {
+const CancelButton = props => {
   const {onPress, text} = props;
 
   return (
@@ -13,9 +13,9 @@ const Cancel_Button = props => {
   );
 };
 
-Cancel_Button.propTypes = {
+CancelButton.propTypes = {
   onPress: PropTypes.func,
   text: PropTypes.string,
 };
 
-export default Cancel_Button;
+export default CancelButton;

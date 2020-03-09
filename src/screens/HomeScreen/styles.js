@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   textTouchable: {
     fontSize: 18,
     fontWeight: 'bold',
-    //FontFamily -> Renombrar la fuente a como figura en el metadata, sino no anda en IOS.
   },
 });
 

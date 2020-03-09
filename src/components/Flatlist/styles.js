@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  lista: {
+  list: {
     padding: 10,
     flex: 1,
   },

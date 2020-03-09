@@ -11,7 +11,7 @@ export function getDrinks(query) {
   return async dispatch => {
     dispatch(get_drinks_init());
     axios
-      .get(URL + `${query}`)
+      .get(`${URL}${query}`)
       .then(response => {
         const drinks = response.data;
         dispatch(get_drinks_success(drinks));
