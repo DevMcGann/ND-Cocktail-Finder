@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     minHeight: 80,
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 4,
   },
 
   iconContainer: {

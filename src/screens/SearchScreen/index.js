@@ -80,7 +80,7 @@ SearchScreen.propTypes = {
   Clean_Drinks: PropTypes.func,
   fetched_Drinks: PropTypes.array,
   fetching: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.string,
   search: PropTypes.string,
 };
 

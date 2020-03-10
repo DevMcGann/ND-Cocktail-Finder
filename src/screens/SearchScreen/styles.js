@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    marginTop: '15%',
+    marginTop: '14%',
     minHeight: '85%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -11,11 +11,12 @@ const styles = StyleSheet.create({
   },
   content: {
     height: '100%',
-    width: '95%',
+    width: '98%',
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: 15,
     backgroundColor: '#20b3c7',
+    borderRadius: 40,
   },
   defaultText: {
     flex: 1,
