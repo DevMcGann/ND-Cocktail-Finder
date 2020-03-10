@@ -9,7 +9,7 @@ const ListOfDrinks = ({drinks}) => {
     <FlatList
       data={drinks}
       renderItem={({item}) => (
-        <Card nombre={item.strDrink} imagen={item.strDrinkThumb} />
+        <Card name={item.strDrink} image={item.strDrinkThumb} />
       )}
       keyExtractor={item => item.idDrink}
       style={styles.list}

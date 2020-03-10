@@ -9,15 +9,15 @@ import {
 
 export function getDrinks(query) {
   return async dispatch => {
-    dispatch(get_drinks_init());
+    dispatch(getDrinksInit());
     axios
       .get(`${URL}${query}`)
       .then(response => {
         const drinks = response.data;
-        dispatch(get_drinks_success(drinks));
+        dispatch(getDrinksSuccess(drinks));
       })
       .catch(error => {
-        dispatch(get_drinks_error(error.message));
+        dispatch(getDrinksError());
       });
   };
 }
@@ -32,17 +32,16 @@ const cleanStore = () => ({
   type: CLEAN_DRINKS,
 });
 
-const get_drinks_init = () => ({
+const getDrinksInit = () => ({
   type: FETCHING_DRINKS,
-  payload: true,
 });
 
-const get_drinks_success = drinks => ({
+const getDrinksSuccess = drinks => ({
   type: FETCHING_DRINKS_SUCCESS,
   payload: drinks,
 });
 
-const get_drinks_error = () => ({
+const getDrinksError = () => ({
   type: FETCHING_DRINKS_ERROR,
-  payload: true,
+  payload: 'Error! Try again Later!',
 });

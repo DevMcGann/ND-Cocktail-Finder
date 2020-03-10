@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const HomeScreen = ({navigation}) => {
   return (
-    <View style={styles.gradient}>
+    <View style={styles.mainContainer}>
       <View style={styles.screen}>
         <View style={styles.logoContainer}>
           <Image style={styles.icon} source={logo} />

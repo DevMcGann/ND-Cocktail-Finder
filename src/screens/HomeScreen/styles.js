@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  gradient: {
+  mainContainer: {
     flex: 1,
     backgroundColor: '#20b3c7',
   },

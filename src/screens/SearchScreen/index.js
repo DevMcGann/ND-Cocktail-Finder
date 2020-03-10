@@ -57,8 +57,8 @@ const SearchScreen = ({navigation}) => {
               </Text>
             );
           }
-          if (error) {
-            return <Text>Error!</Text>;
+          if (error !== '') {
+            return error;
           }
           if (fetching) {
             return <ActivityIndicator size="large" color="#0000ff" />;
