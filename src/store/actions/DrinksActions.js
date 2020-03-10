@@ -6,19 +6,26 @@ import {
   FETCHING_DRINKS_ERROR,
   CLEAN_DRINKS,
 } from './types.js';
+import DrinkModel from '../../models/index.js';
 
 export function getDrinks(query) {
   return async dispatch => {
-    dispatch(getDrinksInit());
-    axios
-      .get(`${URL}${query}`)
-      .then(response => {
-        const drinks = response.data;
-        dispatch(getDrinksSuccess(drinks));
-      })
-      .catch(error => {
-        dispatch(getDrinksError());
+    try {
+      dispatch(getDrinksInit());
+      const response = await axios.get(`${URL}${query}`);
+      const data = response.data.drinks;
+      const fetchedDrinks = data.map(item => {
+        const drink = new DrinkModel(
+          item.idDrink,
+          item.strDrinkThumb,
+          item.strDrink,
+        );
+        return drink;
       });
+      dispatch(getDrinksSuccess(fetchedDrinks));
+    } catch (error) {
+      dispatch(getDrinksError());
+    }
   };
 }
 

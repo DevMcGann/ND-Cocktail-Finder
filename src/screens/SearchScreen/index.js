@@ -43,14 +43,14 @@ const SearchScreen = ({navigation}) => {
       />
       <View style={styles.content}>
         {(() => {
-          if (!search && !fetching && !fetchedDrinks.drinks) {
+          if (!search && !fetching && !fetchedDrinks) {
             return (
               <Text style={styles.defaultText}>
                 Type at least 3 Characters to search your favorite Cocktail
               </Text>
             );
           }
-          if (!fetching && !fetchedDrinks.drinks && search) {
+          if (!fetching && !fetchedDrinks && search) {
             return (
               <Text style={styles.noResults}>
                 Oops! There is no Cocktail with that name!
@@ -64,10 +64,8 @@ const SearchScreen = ({navigation}) => {
             return <ActivityIndicator size="large" color="#0000ff" />;
           }
 
-          if (fetchedDrinks.drinks) {
-            return (
-              <ListOfDrinks style={styles.list} drinks={fetchedDrinks.drinks} />
-            );
+          if (fetchedDrinks) {
+            return <ListOfDrinks style={styles.list} drinks={fetchedDrinks} />;
           }
         })()}
       </View>
@@ -77,8 +75,8 @@ const SearchScreen = ({navigation}) => {
 
 SearchScreen.propTypes = {
   getDrinks: PropTypes.func,
-  Clean_Drinks: PropTypes.func,
-  fetched_Drinks: PropTypes.array,
+  CleanDrinks: PropTypes.func,
+  fetchedDrinks: PropTypes.array,
   fetching: PropTypes.bool,
   error: PropTypes.string,
   search: PropTypes.string,
