@@ -3,7 +3,7 @@ import {View, TextInput, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types';
 import styles from './styles.js';
-import {CancelButton} from '../../components';
+import {CancelButton} from '../Buttons/Cancel';
 
 const Header = ({navigation, callback, cancel}) => {
   const [input, setInput] = useState('');
