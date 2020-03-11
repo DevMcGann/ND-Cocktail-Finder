@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  search_button: {
+  searchButton: {
     backgroundColor: 'white',
     height: '7%',
     width: '80%',

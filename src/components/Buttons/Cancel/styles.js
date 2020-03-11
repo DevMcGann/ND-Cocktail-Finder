@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  cancel_button: {
+  cancelButton: {
     color: 'red',
   },
 

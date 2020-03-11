@@ -7,7 +7,7 @@ const CancelButton = props => {
   const {onPress, text} = props;
 
   return (
-    <TouchableOpacity style={styles.cancel_button} onPress={onPress}>
+    <TouchableOpacity style={styles.cancelButton} onPress={onPress}>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );

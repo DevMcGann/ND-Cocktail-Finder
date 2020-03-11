@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const SearchButton = ({onPress, text}) => {
   return (
-    <TouchableOpacity style={styles.search_button} onPress={onPress}>
+    <TouchableOpacity style={styles.searchButton} onPress={onPress}>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
