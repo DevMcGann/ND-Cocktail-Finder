@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {View, TextInput, TouchableOpacity} from 'react-native';
-import CancelButton from '../../components/Buttons/Cancel';
+import CancelButton from '../Buttons/Cancel';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types';
 import styles from './styles.js';

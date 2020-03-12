@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import Card from '../../components/Flatlist/Card';
+import Card from './Card';
 import styles from './styles.js';
 import PropTypes from 'prop-types';
 
