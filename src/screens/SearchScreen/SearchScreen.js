@@ -42,7 +42,7 @@ const SearchScreen = ({navigation}) => {
       />
       <View style={styles.content}>
         {(() => {
-          if (!search && !fetching && !fetchedDrinks) {
+          if (!search) {
             return (
               <Text style={styles.defaultText}>
                 Type at least 3 Characters to search your favorite Cocktail
