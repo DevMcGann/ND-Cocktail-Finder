@@ -1,4 +1,4 @@
-# NextDots-CocktailFinder
+# ND - Challenge in React Native
 
 
 How to use it?
